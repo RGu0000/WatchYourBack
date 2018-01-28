@@ -11,8 +11,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class AlarmTimer {
-    Toolkit toolkit;
-    Timer timer;
+    private Timer timer;
     private static boolean isRunning;
     private static int min1;
     private static int min2;
@@ -24,17 +23,16 @@ public class AlarmTimer {
     private PopupTask popup = new PopupTask();
     private String[] commentList = new String[]{"Sit straight!","Watch your back!","Did you forget about something?","So close...","How about a cup of tea?","You look like a shrimp :D"};
 
-    public AlarmTimer() {
-        toolkit = Toolkit.getDefaultToolkit();
+    AlarmTimer() {
         timer = new Timer();
     }
 
-    public void setAlarm(long m1, long s1, long m2, long s2, boolean[] b) {
+    void setAlarm(long m1, long s1, long m2, long s2, boolean[] b) {
         isRunning = true;
-        this.min1 = (int) m1;
-        this.min2 = (int) m2;
-        this.sec1 = (int) s1;
-        this.sec2 = (int) s2;
+        min1 = (int) m1;
+        min2 = (int) m2;
+        sec1 = (int) s1;
+        sec2 = (int) s2;
 
         if (b[0]) {
             int i = random.nextInt((min2 - min1) * 60 * 1000 + (sec2 - sec1) * 1000) + min1 * 60 * 1000 + sec1 * 1000;
@@ -50,7 +48,7 @@ public class AlarmTimer {
         }
     }
 
-    public void StopTimer() {
+    void StopTimer() {
         isRunning = false;
     }
 

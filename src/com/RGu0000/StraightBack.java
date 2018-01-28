@@ -335,9 +335,6 @@ class StraightBack {
         panel3.add(spacer26, gbc);
 
 
-
-
-
         JSpinners.add(spinner1);
         JSpinners.add(spinner2);
         JSpinners.add(spinner3);
@@ -346,9 +343,6 @@ class StraightBack {
         JCheckBoxes.add(CheckBox1);
         JCheckBoxes.add(CheckBox2);
         JCheckBoxes.add(CheckBox3);
-
-
-
 
 
         frame.setContentPane(panel1);
